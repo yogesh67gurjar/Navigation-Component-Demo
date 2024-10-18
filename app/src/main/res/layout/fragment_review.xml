@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragments.ReviewFragment">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/layout_common_header" />
+
+        <TextView
+            android:id="@+id/recipientEt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1$ to Yogesh"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+</layout>
