@@ -15,19 +15,11 @@ class ReviewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         fragmentReviewBinding = FragmentReviewBinding.inflate(inflater, container, false)
-        initHeader()
         setup()
         return fragmentReviewBinding.root
     }
 
     private fun setup() {
 
-    }
-
-    private fun initHeader() {
-        fragmentReviewBinding.header.title.text = "Review Transfer"
-        fragmentReviewBinding.header.backBtn.setOnClickListener {
-
-        }
     }
 }

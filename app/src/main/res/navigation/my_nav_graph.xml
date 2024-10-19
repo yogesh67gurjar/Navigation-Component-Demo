@@ -8,7 +8,8 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.yogesh.navigationcomponentdemo.fragments.MainFragment"
-        tools:layout="@layout/fragment_main" >
+        android:label="Home"
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_viewBalanceFragment"
             app:destination="@id/viewBalanceFragment" />
@@ -20,30 +21,35 @@
             app:destination="@id/transactionsFragment" />
     </fragment>
     <fragment
+        android:label="My Balance"
         android:id="@+id/viewBalanceFragment"
         android:name="com.yogesh.navigationcomponentdemo.fragments.ViewBalanceFragment"
         tools:layout="@layout/fragment_view_balance" />
     <fragment
+        android:label="Transactions"
         android:id="@+id/transactionsFragment"
         android:name="com.yogesh.navigationcomponentdemo.fragments.TransactionsFragment"
         tools:layout="@layout/fragment_transactions" />
     <fragment
+        android:label="Recipients"
         android:id="@+id/recipientFragment"
         android:name="com.yogesh.navigationcomponentdemo.fragments.RecipientFragment"
-        tools:layout="@layout/fragment_recipient" >
+        tools:layout="@layout/fragment_recipient">
         <action
             android:id="@+id/action_recipientFragment_to_enterAmountFragment"
             app:destination="@id/enterAmountFragment" />
     </fragment>
     <fragment
+        android:label="Enter Amount"
         android:id="@+id/enterAmountFragment"
         android:name="com.yogesh.navigationcomponentdemo.fragments.EnterAmountFragment"
-        tools:layout="@layout/fragment_enter_amount" >
+        tools:layout="@layout/fragment_enter_amount">
         <action
             android:id="@+id/action_enterAmountFragment_to_reviewFragment"
             app:destination="@id/reviewFragment" />
     </fragment>
     <fragment
+        android:label="Review Txn"
         android:id="@+id/reviewFragment"
         android:name="com.yogesh.navigationcomponentdemo.fragments.ReviewFragment"
         tools:layout="@layout/fragment_review" />

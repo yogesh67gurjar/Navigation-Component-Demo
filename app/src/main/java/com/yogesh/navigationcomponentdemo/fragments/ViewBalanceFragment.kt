@@ -15,14 +15,6 @@ class ViewBalanceFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         fragmentViewBalanceBinding = FragmentViewBalanceBinding.inflate(inflater, container, false)
-        initHeader()
         return fragmentViewBalanceBinding.root
-    }
-
-    private fun initHeader() {
-        fragmentViewBalanceBinding.header.title.text = "View Balance"
-        fragmentViewBalanceBinding.header.backBtn.setOnClickListener {
-
-        }
     }
 }

@@ -16,17 +16,7 @@ class TransactionsFragment : Fragment() {
     ): View? {
         fragmentTransactionsBinding =
             FragmentTransactionsBinding.inflate(inflater, container, false)
-        initHeader()
 
         return fragmentTransactionsBinding.root
     }
-
-
-    private fun initHeader() {
-        fragmentTransactionsBinding.header.title.text = "View Transactions"
-        fragmentTransactionsBinding.header.backBtn.setOnClickListener {
-
-        }
-    }
-
 }

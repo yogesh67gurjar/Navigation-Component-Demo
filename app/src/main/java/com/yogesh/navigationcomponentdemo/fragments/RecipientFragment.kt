@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.yogesh.navigationcomponentdemo.R
 import com.yogesh.navigationcomponentdemo.databinding.FragmentRecipientBinding
 
 class RecipientFragment : Fragment() {
@@ -14,25 +16,17 @@ class RecipientFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         fragmentRecipientBinding = FragmentRecipientBinding.inflate(inflater, container, false)
-        initHeader()
         setup()
         return fragmentRecipientBinding.root
     }
 
     private fun setup() {
         fragmentRecipientBinding.cancelBtn.setOnClickListener {
-
+            findNavController().navigateUp()
         }
 
         fragmentRecipientBinding.okBtn.setOnClickListener {
-
-        }
-    }
-
-    private fun initHeader() {
-        fragmentRecipientBinding.header.title.text = "Enter recipient name"
-        fragmentRecipientBinding.header.backBtn.setOnClickListener {
-
+            findNavController().navigate(R.id.action_recipientFragment_to_enterAmountFragment)
         }
     }
 }

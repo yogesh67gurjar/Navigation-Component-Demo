@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.yogesh.navigationcomponentdemo.R
 import com.yogesh.navigationcomponentdemo.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -14,13 +16,18 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         fragmentMainBinding = FragmentMainBinding.inflate(inflater, container, false)
-        initHeader()
+
+        fragmentMainBinding.sendMoneyBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_recipientFragment)
+        }
+
+        fragmentMainBinding.viewTransactionsBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_transactionsFragment)
+        }
+
+        fragmentMainBinding.checkBalanceBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_viewBalanceFragment)
+        }
         return fragmentMainBinding.root
-    }
-
-
-    private fun initHeader() {
-        fragmentMainBinding.header.title.text = "Home"
-        fragmentMainBinding.header.backBtn.visibility = View.GONE
     }
 }

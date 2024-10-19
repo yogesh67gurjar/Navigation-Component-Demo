@@ -1,9 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.NavigationComponentDemo" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Base.Theme.NavigationComponentDemo" parent="Theme.Material3.DayNight">
+        <item name="actionBarTheme">@style/actionBar</item>
+        <item name="android:statusBarColor">@color/lightGreen</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <style name="Theme.NavigationComponentDemo" parent="Base.Theme.NavigationComponentDemo" />
+    <style name="actionBar" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/lightGreen</item>
+    </style>
 </resources>

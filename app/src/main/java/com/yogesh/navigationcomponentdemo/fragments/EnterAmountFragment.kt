@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.yogesh.navigationcomponentdemo.R
 import com.yogesh.navigationcomponentdemo.databinding.FragmentEnterAmountBinding
 
@@ -15,25 +16,17 @@ class EnterAmountFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         fragmentEnterAmountBinding = FragmentEnterAmountBinding.inflate(inflater, container, false)
-        initHeader()
         setup()
         return fragmentEnterAmountBinding.root
     }
 
     private fun setup() {
         fragmentEnterAmountBinding.cancelBtn.setOnClickListener {
-
+            findNavController().navigateUp()
         }
 
         fragmentEnterAmountBinding.okBtn.setOnClickListener {
-
-        }
-    }
-
-    private fun initHeader() {
-        fragmentEnterAmountBinding.header.title.text = "Enter Amount"
-        fragmentEnterAmountBinding.header.backBtn.setOnClickListener {
-
+            findNavController().navigate(R.id.action_enterAmountFragment_to_reviewFragment)
         }
     }
 }
