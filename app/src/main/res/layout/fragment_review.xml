@@ -10,11 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".fragments.ReviewFragment">
+        tools:context=".ui.fragments.ReviewFragment">
 
 
         <TextView
-            android:id="@+id/recipientEt"
+            android:id="@+id/tv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"

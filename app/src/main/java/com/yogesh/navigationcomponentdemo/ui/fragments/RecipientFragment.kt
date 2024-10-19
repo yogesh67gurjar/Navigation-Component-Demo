@@ -1,10 +1,11 @@
-package com.yogesh.navigationcomponentdemo.fragments
+package com.yogesh.navigationcomponentdemo.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.yogesh.navigationcomponentdemo.R
 import com.yogesh.navigationcomponentdemo.databinding.FragmentRecipientBinding
@@ -26,7 +27,11 @@ class RecipientFragment : Fragment() {
         }
 
         fragmentRecipientBinding.okBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_recipientFragment_to_enterAmountFragment)
+            val navDirection: NavDirections =
+                RecipientFragmentDirections.actionRecipientFragmentToEnterAmountFragment(
+                    fragmentRecipientBinding.recipientEt.text.toString()
+                )
+            findNavController().navigate(navDirection)
         }
     }
 }

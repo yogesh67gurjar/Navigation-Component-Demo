@@ -1,10 +1,11 @@
-package com.yogesh.navigationcomponentdemo.fragments
+package com.yogesh.navigationcomponentdemo.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.yogesh.navigationcomponentdemo.R
 import com.yogesh.navigationcomponentdemo.databinding.FragmentEnterAmountBinding
@@ -16,6 +17,7 @@ class EnterAmountFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         fragmentEnterAmountBinding = FragmentEnterAmountBinding.inflate(inflater, container, false)
+
         setup()
         return fragmentEnterAmountBinding.root
     }
@@ -26,7 +28,14 @@ class EnterAmountFragment : Fragment() {
         }
 
         fragmentEnterAmountBinding.okBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_enterAmountFragment_to_reviewFragment)
+            var name = EnterAmountFragmentArgs.fromBundle(requireArguments()).name
+
+            var navDirection: NavDirections =
+                EnterAmountFragmentDirections.actionEnterAmountFragmentToReviewFragment(
+                    name,
+                    Integer.parseInt(fragmentEnterAmountBinding.amountEt.text.toString())
+                )
+            findNavController().navigate(navDirection)
         }
     }
 }

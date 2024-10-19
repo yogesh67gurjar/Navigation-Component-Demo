@@ -1,4 +1,4 @@
-package com.yogesh.navigationcomponentdemo.fragments
+package com.yogesh.navigationcomponentdemo.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

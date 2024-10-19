@@ -1,4 +1,4 @@
-package com.yogesh.navigationcomponentdemo.fragments
+package com.yogesh.navigationcomponentdemo.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -20,6 +20,9 @@ class ReviewFragment : Fragment() {
     }
 
     private fun setup() {
+        var amount = ReviewFragmentArgs.fromBundle(requireArguments()).amount
+        var name = ReviewFragmentArgs.fromBundle(requireArguments()).name
 
+        fragmentReviewBinding.tv.text = "You've sent $amount$ to $name"
     }
 }

@@ -1,15 +1,12 @@
-package com.yogesh.navigationcomponentdemo
+package com.yogesh.navigationcomponentdemo.ui
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.yogesh.navigationcomponentdemo.R
 import com.yogesh.navigationcomponentdemo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
