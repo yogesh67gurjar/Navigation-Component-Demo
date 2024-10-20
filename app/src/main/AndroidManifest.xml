@@ -13,16 +13,16 @@
         android:theme="@style/Base.Theme.NavigationComponentDemo"
         tools:targetApi="31">
         <activity
-            android:name=".ui.ThreeActivity"
+            android:name=".activity.ThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.TwoActivity"
+            android:name=".activity.TwoActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.OneActivity"
+            android:name=".activity.OneActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.yogesh.navigationcomponentdemo.ui.fragments.MainFragment"
+        android:name="com.yogesh.navigationcomponentdemo.fragments.MainFragment"
         android:label="Home"
         tools:layout="@layout/fragment_main">
         <action
@@ -23,19 +23,19 @@
 
     <fragment
         android:id="@+id/viewBalanceFragment"
-        android:name="com.yogesh.navigationcomponentdemo.ui.fragments.ViewBalanceFragment"
+        android:name="com.yogesh.navigationcomponentdemo.fragments.ViewBalanceFragment"
         android:label="My Balance"
         tools:layout="@layout/fragment_view_balance" />
 
     <fragment
         android:id="@+id/transactionsFragment"
-        android:name="com.yogesh.navigationcomponentdemo.ui.fragments.TransactionsFragment"
+        android:name="com.yogesh.navigationcomponentdemo.fragments.TransactionsFragment"
         android:label="Transactions"
         tools:layout="@layout/fragment_transactions" />
 
     <fragment
         android:id="@+id/recipientFragment"
-        android:name="com.yogesh.navigationcomponentdemo.ui.fragments.RecipientFragment"
+        android:name="com.yogesh.navigationcomponentdemo.fragments.RecipientFragment"
         android:label="Recipients"
         tools:layout="@layout/fragment_recipient">
         <action
@@ -45,7 +45,7 @@
 
     <fragment
         android:id="@+id/enterAmountFragment"
-        android:name="com.yogesh.navigationcomponentdemo.ui.fragments.EnterAmountFragment"
+        android:name="com.yogesh.navigationcomponentdemo.fragments.EnterAmountFragment"
         android:label="Enter Amount"
         tools:layout="@layout/fragment_enter_amount">
         <action
@@ -58,7 +58,7 @@
 
     <fragment
         android:id="@+id/reviewFragment"
-        android:name="com.yogesh.navigationcomponentdemo.ui.fragments.ReviewFragment"
+        android:name="com.yogesh.navigationcomponentdemo.fragments.ReviewFragment"
         android:label="Review Txn"
         tools:layout="@layout/fragment_review">
         <argument

@@ -1,4 +1,4 @@
-package com.yogesh.navigationcomponentdemo.ui.fragments
+package com.yogesh.navigationcomponentdemo.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,7 +13,7 @@ class ViewBalanceFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         fragmentViewBalanceBinding = FragmentViewBalanceBinding.inflate(inflater, container, false)
         return fragmentViewBalanceBinding.root
     }

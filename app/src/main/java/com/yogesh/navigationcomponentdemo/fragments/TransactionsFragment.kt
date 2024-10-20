@@ -1,4 +1,4 @@
-package com.yogesh.navigationcomponentdemo.ui.fragments
+package com.yogesh.navigationcomponentdemo.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,11 +9,11 @@ import com.yogesh.navigationcomponentdemo.R
 import com.yogesh.navigationcomponentdemo.databinding.FragmentTransactionsBinding
 
 class TransactionsFragment : Fragment() {
-    lateinit var fragmentTransactionsBinding: FragmentTransactionsBinding
+    private lateinit var fragmentTransactionsBinding: FragmentTransactionsBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         fragmentTransactionsBinding =
             FragmentTransactionsBinding.inflate(inflater, container, false)
 
