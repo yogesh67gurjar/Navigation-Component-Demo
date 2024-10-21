@@ -1,13 +1,12 @@
 package com.yogesh.navigationcomponentdemo.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.navigateUp
 import com.yogesh.navigationcomponentdemo.R
 import com.yogesh.navigationcomponentdemo.databinding.FragmentSignUpBinding
 
